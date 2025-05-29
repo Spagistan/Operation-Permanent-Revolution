@@ -1,1 +1,0 @@
-radio addAction ["Play Radio", {radioH = [] execVM "playRadio.sqf"}, [], 6, false, true, "", "_target distance _this < 2"];
