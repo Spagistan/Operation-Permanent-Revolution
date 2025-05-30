@@ -8,7 +8,7 @@ _timeToCover = parseNumber J3FF_FHcover; */
 
 _depth = 1.3; //How deep in meters should the hole be? (CBA)
 _diamater = 1; //What is the diameter of the hole? (PLACEHODLER)
-_timeToDig = 30; //How long does it take to dig the hole? (CBA)
+_timeToDig = 50; //How long does it take to dig the hole? (CBA)
 _timeToCover = 5;
 
 

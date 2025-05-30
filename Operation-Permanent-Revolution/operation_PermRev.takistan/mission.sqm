@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2289;
+		nextID=2293;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=397;
+		nextID=481;
 	};
 	class Camera
 	{
-		pos[]={6071.8379,85.213303,11500.507};
-		dir[]={-0.82556254,-0.23498328,-0.51308405};
-		up[]={-0.19958474,0.97199488,-0.12404156};
-		aside[]={-0.52786517,3.6234269e-07,0.84934551};
+		pos[]={6093.5156,118.54772,11490.786};
+		dir[]={-0.72663254,-0.68442166,0.060054101};
+		up[]={-0.68209398,0.72908211,0.056372888};
+		aside[]={0.082367271,1.5526894e-07,0.99661946};
 	};
 };
 binarizationWanted=0;
@@ -914,11 +914,51 @@ randomSeed=9598873;
 class ScenarioData
 {
 	author="Spagistan Armed Forces";
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=60.000004;
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1178,7 +1218,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=962;
+		items=965;
 		class Item0
 		{
 			dataType="Layer";
@@ -36994,7 +37034,7 @@ class Mission
 					};
 					id=121;
 					type="YAK130_Spagpat";
-					atlOffset=0.0002746582;
+					atlOffset=0.00023651123;
 				};
 				class Item21
 				{
@@ -47775,7 +47815,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="-1";
+							value="150";
 						};
 					};
 				};
@@ -47788,7 +47828,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="-1";
+							value="300";
 						};
 					};
 				};
@@ -47945,7 +47985,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="5000";
+							value="2000";
 						};
 					};
 				};
@@ -48010,7 +48050,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="248";
+							value="100";
 						};
 					};
 				};
@@ -48023,7 +48063,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="1500";
+							value="1000";
 						};
 					};
 				};
@@ -48075,7 +48115,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="0.3";
+							value="2";
 						};
 					};
 				};
@@ -124608,7 +124648,6 @@ class Mission
 					};
 					id=2167;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item14
 				{
@@ -124626,7 +124665,6 @@ class Mission
 					};
 					id=2168;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item15
 				{
@@ -124661,7 +124699,6 @@ class Mission
 					};
 					id=2170;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item17
 				{
@@ -124713,7 +124750,6 @@ class Mission
 					};
 					id=2173;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item20
 				{
@@ -124935,7 +124971,6 @@ class Mission
 					};
 					id=2186;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item33
 				{
@@ -124953,7 +124988,6 @@ class Mission
 					};
 					id=2187;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item34
 				{
@@ -124988,7 +125022,6 @@ class Mission
 					};
 					id=2189;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item36
 				{
@@ -125006,7 +125039,6 @@ class Mission
 					};
 					id=2190;
 					type="Land_MobilePhone_old_F";
-					atlOffset=0.00021362305;
 				};
 				class Item37
 				{
@@ -125061,7 +125093,7 @@ class Mission
 				};
 			};
 			id=2194;
-			atlOffset=0.7146759;
+			atlOffset=0.71464539;
 		};
 		class Item909
 		{
@@ -127657,6 +127689,105 @@ class Mission
 				};
 				nAttributes=10;
 			};
+		};
+		class Item962
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6071.0879,82.997482,11502.338};
+			};
+			id=2289;
+			type="ModuleRespawnPosition_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnPosition_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnPosition_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Rasman Airbase";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnPosition_F_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="2";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnPosition_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnPosition_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item963
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={13837.662,463.47852,7680.853};
+			};
+			id=2291;
+			type="HeadlessClient_F";
+		};
+		class Item964
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={13837.662,418.4454,7323.9893};
+			};
+			id=2292;
+			type="HeadlessClient_F";
 		};
 	};
 	class Connections
