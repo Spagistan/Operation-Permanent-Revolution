@@ -1,0 +1,7 @@
+disableChannels[]={3,1};
+respawnOnStart = 0; //Dont respawn on start. Run respawn script on start.
+enableDebugConsole[] = { "76561198076640981" };
+forceRotorLibSimulation = 1;
+minPlayerDistance = 2000; // meters. Default: 0
+
+ //arsenalRestrictedItems[] = { "U_B_Soldier_VR" };
